@@ -1,0 +1,10 @@
+#cautare recursiva daor in fisiere de tip *.xml
+grep -r -e "help=.*_" . --include=*.xml
+
+
+#cautare recursiva dupa linii care contin "MAX-ACCESS" dar   NU  contin "not-accessible"
+grep -r -e "MAX-ACCESS" . | grep -v "not-accessible"
+
+
+#Get maximum latency: linux
+max=`grep "Max Latencies" $OUTPUT | tr " " "\n" | sort -n | tail -1 | sed s/^0*//`

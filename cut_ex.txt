@@ -1,0 +1,5 @@
+
+echo rsp_3s | cut -d_ -f1
+
+>>>
+rsp

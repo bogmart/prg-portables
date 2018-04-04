@@ -1,0 +1,17 @@
+
+
+regex2.dll   - grep v2.5.4
+pcre3.dll
+
+libintl.dll    - tail v2.1
+libiconv.dll
+
+libiconv2.dll   - ls + find2
+libintl3.dll
+
+
+libintl-2.dll  - sed
+libiconv-2.dll
+
+
+pcre.dll       - less

@@ -1,0 +1,10 @@
+ls -1 -l | awk "{ sum += $5 }; END { print sum }"
+
+
+grep -c -r  "HM_MODIFIED" . --exclude=*.[oads]* | awk  -F ":" " { sum +=$2 } ; END { print sum }"
+
+grep2 -c -r  "HM_MODIFIED" . --exclude-dir=".svn"
+
+
+# daca 'coloana #9 == Login si colona #10 == failure' atunci face suna  pt 'colona #18'
+awk -F "[ (]+" "{$9 ~ "Login" && $10 ~ "failure"} {sum += $18}; END { print \"\nNo of failures: \" sum }" < ssh.txt
